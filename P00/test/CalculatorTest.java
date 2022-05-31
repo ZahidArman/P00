@@ -36,7 +36,7 @@ public class CalculatorTest {
 		assertEquals (expected, actual);
 		}
 	@Test
-	public void testAddBMax() {
+	public void testAddB() {
 		int a = 9999;
 		int b = 9999;
 			
@@ -46,16 +46,7 @@ public class CalculatorTest {
 		int expected = 19998;
 		assertEquals (expected, actual);
 		}
-	public void testAddBMin() {
-		int a = 0;
-		int b = 0;
-			
-		Calculator cal = new Calculator();
-		int actual = cal.add(a, b); 
-			 
-		int expected = 0;
-		assertEquals (expected, actual);
-		}
+	@Test
 	public void testAddError() {
 		int a = -1;
 		int b = 9999;
@@ -75,17 +66,6 @@ public class CalculatorTest {
 		int actual = cal.subtract(a, b); 
 			 
 		int expected = 5555;
-		assertEquals (expected, actual);
-		}
-	@Test
-	public void testSubtractBMax() {
-		int a = 9999;
-		int b = 0;
-			
-		Calculator cal = new Calculator();
-		int actual = cal.subtract(a, b); 
-			 
-		int expected = 9999;
 		assertEquals (expected, actual);
 		}
 	@Test
@@ -121,6 +101,7 @@ public class CalculatorTest {
 		int expected = 1500;
 		assertEquals (expected, actual);
 		}
+	@Test
 	public void testMultiplyBMax() {
 		int a = 9999;
 		int b = 9999;
@@ -131,16 +112,8 @@ public class CalculatorTest {
 		int expected = 99980001;
 		assertEquals (expected, actual);
 		}
-	public void testMultiplyBMin() {
-		int a = 0;
-		int b = 0;
-			
-		Calculator cal = new Calculator();
-		int actual = cal.multiply(a, b); 
-			 
-		int expected = 0;
-		assertEquals (expected, actual);
-		}
+
+	@Test
 	public void testMultiplyError() {
 		int a = -50;
 		int b = 30;
@@ -152,7 +125,7 @@ public class CalculatorTest {
 		assertNotEquals (expected, actual);
 		}
 	@Test
-	public void testDivide() {
+	public void testDivideN() {
 		int a = 50;
 		int b = 10;
 			
@@ -162,7 +135,8 @@ public class CalculatorTest {
 		int expected = 5;
 		assertEquals (expected, actual);
 		}
-	public void testDivideBMax() {
+	@Test
+	public void testDivideB() {
 		int a = 9999;
 		int b = 9999;
 			
@@ -172,23 +146,13 @@ public class CalculatorTest {
 		int expected = 1;
 		assertEquals (expected, actual);
 		}
-	public void testDivideBMin() {
-		int a = 9999;
-		int b = 0;
-			
-		Calculator cal = new Calculator();
-		int actual = cal.divide(a, b); 
-			 
-		int expected = 1;
-		assertEquals (expected, actual);
-		}
+	@Test
 	public void testDivideError() {
 		int a = -1;
 		int b = 9999;
 			
 		Calculator cal = new Calculator();
 		int actual = cal.divide(a, b); 
-			 
 		String expected = "Error!";
 		assertNotEquals (expected, actual);
 		}
